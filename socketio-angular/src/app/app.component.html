@@ -1,6 +1,7 @@
 <div class="App">
+  <h1>{{ heading }}</h1>
   <form [formGroup]="tokenForm" (submit)="submitToken()">
-    <input type="text" placeholder="Enter token" formControlName="token" style="width:414px;" />
+    <input type="text" placeholder="Enter token" formControlName="token" />
     <button type="submit">Submit</button>
   </form>
   <div class="box" style="height:auto;">
@@ -16,7 +17,7 @@
       </div>
     </div>
     <form [formGroup]="messageForm" class="input-div" (submit)="submitMessage()">
-      <input type="text" placeholder="Type in text" formControlName="message" />
+      <input type="text" placeholder="Type in text" formControlName="message" class="inside" />
       <button type="submit">Send</button>
     </form>
   </div>

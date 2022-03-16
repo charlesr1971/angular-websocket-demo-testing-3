@@ -17,6 +17,7 @@ const SENDER = {
 
 export class AppComponent implements OnInit {
   title = 'socketio-angular';
+  heading = 'Web socket with Camunda Demo';
 
   CHAT_ROOM = "myRandomChatRoomId";
 
