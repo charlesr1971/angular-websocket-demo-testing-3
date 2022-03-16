@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
 
   CHAT_ROOM = "myRandomChatRoomId";
 
-  token = '';
+  token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1Njc4OTAiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE1MTYyMzkwMjJ9.DHRRG7N3wUVftglHa5cD231vRrdD2Tn_NPUVoxoY1Ng';
 
   messages = [];
 
@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.token = this.utilsService.uuid() || '';
+    //this.token = this.utilsService.uuid() || '';
   }
 
   submitToken() {
