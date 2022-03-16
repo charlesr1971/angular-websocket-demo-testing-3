@@ -6,13 +6,19 @@
   </form>
   <div class="box" style="height:auto;">
     <div class="messages">
-      <p><strong>JWT:</strong></p>
-      <p>{{ token }}</p>
+      <p><strong>John Doe:</strong></p>
+      <p>{{ token1 }}</p>
+    </div>
+  </div>
+  <div class="box" style="height:auto;">
+    <div class="messages">
+      <p><strong>Jane Doe:</strong></p>
+      <p>{{ token2 }}</p>
     </div>
   </div>
   <div class="box">
     <div class="messages">
-      <div *ngFor="let user of messages" style="padding:12px;">
+      <div *ngFor="let user of messages" style="padding:12px;" #messagesDiv>
         {{user.name}}: {{user.message}}
       </div>
     </div>
