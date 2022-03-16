@@ -20,11 +20,24 @@
   width: 100%;
 }
 
+input {
+  width: 424px;
+  padding: 8px;
+}
+
 p {
   display: flex;
-  width: 224px;
+  width: 494px;
   word-break: break-all;
   padding: 10px;
   box-sizing: border-box;
   margin: 0;
+}
+
+p:nth-of-type(1) {
+  border-bottom: 1px solid black;
+}
+
+button {
+  padding: 8px;
 }
