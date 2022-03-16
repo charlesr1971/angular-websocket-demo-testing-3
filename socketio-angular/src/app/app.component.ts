@@ -2,6 +2,8 @@ import { SocketioService } from './socketio.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
+import { UtilsService } from './core/services/utils/utils.service';
+
 // static data only for demo purposes, in real world scenario, this would be already stored on client
 const SENDER = {
   id: "123",
@@ -18,6 +20,8 @@ export class AppComponent implements OnInit {
 
   CHAT_ROOM = "myRandomChatRoomId";
 
+  token = '';
+
   messages = [];
 
   tokenForm = this.formBuilder.group({
@@ -28,9 +32,14 @@ export class AppComponent implements OnInit {
     message: '',
   });
 
-  constructor(private socketService: SocketioService, private formBuilder: FormBuilder) {}
+  constructor(
+    private socketService: SocketioService,
+    private formBuilder: FormBuilder,
+    private utilsService: UtilsService
+  ) {}
 
   ngOnInit() {
+    this.token = this.utilsService.uuid() || '';
   }
 
   submitToken() {
@@ -61,7 +70,7 @@ export class AppComponent implements OnInit {
       this.messageForm.reset();
     }
   }
-  
+
   ngOnDestroy() {
     this.socketService.disconnect();
   }

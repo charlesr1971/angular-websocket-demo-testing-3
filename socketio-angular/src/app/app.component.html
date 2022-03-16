@@ -3,6 +3,7 @@
     <input type="text" placeholder="Enter token" formControlName="token" />
     <button type="submit">Submit</button>
   </form>
+  <p><strong>Token:</strong> {{ token }}</p>
   <div class="box">
     <div class="messages">
       <div *ngFor="let user of messages">
