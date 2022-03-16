@@ -3,7 +3,12 @@
     <input type="text" placeholder="Enter token" formControlName="token" />
     <button type="submit">Submit</button>
   </form>
-  <p><strong>JWT:</strong> {{ token }}</p>
+  <div class="box" style="height:auto;">
+    <div class="messages">
+      <p><strong>JWT:</strong></p>
+      <p>{{ token }}</p>
+    </div>
+  </div>
   <div class="box">
     <div class="messages">
       <div *ngFor="let user of messages">
