@@ -12,6 +12,10 @@ export class SocketioService {
 
   setupSocketConnection(token: string) {
     this.socket = io(environment.SOCKET_ENDPOINT, {
+      /* path: environment.PATH,
+      transports: ['websocket'],
+      reconnection: false, */
+      query: {},
       auth: {
         token
       }
@@ -34,7 +38,7 @@ export class SocketioService {
   joinRoom = (roomName) => {
     this.socket.emit('join', roomName);
   }
-  
+
   disconnect() {
     if (this.socket) {
       this.socket.disconnect();

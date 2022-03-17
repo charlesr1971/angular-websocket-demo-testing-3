@@ -5,6 +5,8 @@
 export const environment = {
   production: false,
   SOCKET_ENDPOINT: 'http://localhost:3000'
+  /* SOCKET_ENDPOINT: 'ws://localhost:8080',
+  PATH: '/javaee7-websocket-basic/hello' */
 };
 
 /*
